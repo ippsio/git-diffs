@@ -201,9 +201,9 @@ check_status_in_dir() {
 ### Main ###
 main() {
 if [ $# -eq 0 ]; then
-  # Check current directory.
-  cd_git_toplevel '.' || return 1
-  set '.'
+    # Check current directory.
+    cd_git_toplevel '.' || return 1
+    set '.'
 fi
 exec_cmd_in_dir 'check_remote_in_dir' "$@"
 exec_cmd_in_dir 'check_status_in_dir' "$@"
